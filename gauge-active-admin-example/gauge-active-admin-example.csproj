@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7017FF9A-13E0-4922-B9D3-D5FEE370AE1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gauge_active_admin_example</RootNamespace>
+    <AssemblyName>gauge-active-admin-example</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.7.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Gauge.CSharp.Lib, Version=0.6.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath Condition="Exists('packages\Gauge.CSharp.Lib.0.6.1\lib\net45\Gauge.CSharp.Lib.dll')">packages\Gauge.CSharp.Lib.0.6.1\lib\net45\Gauge.CSharp.Lib.dll</HintPath>
+      <HintPath Condition="Exists('..\packages\Gauge.CSharp.Lib.0.6.1\lib\net45\Gauge.CSharp.Lib.dll')">..\packages\Gauge.CSharp.Lib.0.6.1\lib\net45\Gauge.CSharp.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentAssertions">
+      <HintPath Condition="Exists('packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.dll')">packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.dll</HintPath>
+      <HintPath Condition="Exists('..\packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.dll')">..\packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentAssertions.Core">
+      <HintPath Condition="Exists('packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.Core.dll')">packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.Core.dll</HintPath>
+      <HintPath Condition="Exists('..\packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.Core.dll')">..\packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.4.0\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.4.0\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerSignup.cs" />
+    <Compile Include="LogIn.cs" />
+    <Compile Include="LogOut.cs" />
+    <Compile Include="PlaceOrder.cs" />
+    <Compile Include="util\AppLauncher.cs" />
+    <Compile Include="util\Driver.cs" />
+    <Compile Include="util\DriverFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\FlashMessages.cs" />
+    <Compile Include="util\WebDriverWaitWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Env\default\default.properties" />
+    <None Include="Env\default\user.properties" />
+    <None Include="manifest.json" />
+    <None Include="packages.config" />
+    <None Include="Specs\concepts\Authentication.cpt" />
+    <None Include="Specs\concepts\CustomerSignup.cpt" />
+    <None Include="Specs\concepts\GotoWebsiteStore.cpt" />
+    <None Include="Specs\concepts\PlaceOrder.cpt" />
+    <None Include="Specs\CustomerLogout.spec" />
+    <None Include="Specs\CustomerSignup.spec" />
+    <None Include="Specs\PlaceOrder.spec" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
