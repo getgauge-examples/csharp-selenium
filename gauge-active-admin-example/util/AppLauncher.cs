@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gauge.CSharp.Lib.Attribute;
-using gauge_active_admin_example.util;
+using GaugeActiveAdminExample.util;
 using System.Configuration;
 
 
-namespace gauge_active_admin_example
+namespace GaugeActiveAdminExample
 {
     public class AppLauncher
     {
         [Step("Go to the store website")]
-        public void launchTheApplication()
+        public void LaunchTheApplication()
         {
             Driver.WebDriver.Navigate().GoToUrl(Environment.GetEnvironmentVariable("APP_URL"));
             

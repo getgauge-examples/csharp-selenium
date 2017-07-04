@@ -1,17 +1,17 @@
 ﻿using System;
 using Gauge.CSharp.Lib;
 using Gauge.CSharp.Lib.Attribute;
-using gauge_active_admin_example.util;
+using GaugeActiveAdminExample.util;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using System.Collections.Generic;
 
-namespace gauge_active_admin_example
+namespace GaugeActiveAdminExample
 {
     public class CustomerSignup
     {
         [Step("Sign up as <customer> with email <customer@example.com> and <password>")]
-        public void registerCustomerWith(String customer, String email, String password)
+        public void RegisterCustomerWith(string customer, string email, string password)
         {
             IWebDriver webDriver = Driver.WebDriver;
             webDriver.FindElement(By.LinkText("Sign up")).Click();
@@ -24,13 +24,12 @@ namespace gauge_active_admin_example
             form.FindElement(By.Name("commit")).Click();
         }
 
-    [Step("See items available for purchase.")]
-    public void seeItemsAvailableForPurchase()
-        {
-            IWebDriver webDriver = Driver.WebDriver;
-            var products = webDriver.FindElements(By.ClassName("product"));
-            Assert.That(products.Count, Is.Not.Zero);
+        [Step("See items available for purchase.")]
+        public void SeeItemsAvailableForPurchase()
+            {
+                IWebDriver webDriver = Driver.WebDriver;
+                var products = webDriver.FindElements(By.ClassName("product"));
+                Assert.That(products.Count, Is.Not.Zero);
+            }
         }
-    }
-
 }

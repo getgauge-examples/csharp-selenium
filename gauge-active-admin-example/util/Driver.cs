@@ -7,7 +7,7 @@ using Gauge.CSharp.Lib.Attribute;
 using OpenQA.Selenium;
 
 
-namespace gauge_active_admin_example.util
+namespace GaugeActiveAdminExample.util
 {
     public class Driver
     {

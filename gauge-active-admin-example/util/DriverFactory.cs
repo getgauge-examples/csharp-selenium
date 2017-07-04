@@ -4,7 +4,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 
-namespace gauge_active_admin_example.util
+namespace GaugeActiveAdminExample.util
 {
     public class DriverFactory
     {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace gauge_active_admin_example.util
+namespace GaugeActiveAdminExample.util
 {
     public class WebDriverWaitWrapper
     {

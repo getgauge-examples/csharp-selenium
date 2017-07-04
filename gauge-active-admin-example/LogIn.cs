@@ -1,9 +1,9 @@
-namespace gauge_active_admin_example
+namespace GaugeActiveAdminExample
 {
     using System;
     using Gauge.CSharp.Lib;
     using Gauge.CSharp.Lib.Attribute;
-    using gauge_active_admin_example.util;
+    using GaugeActiveAdminExample.util;
     using NUnit.Framework;
     using OpenQA.Selenium;
 
@@ -22,7 +22,7 @@ namespace gauge_active_admin_example
         }
 
         [Step("Show the log in status for user <customer>")]
-        public void showTheLogInStatusForUser(String customer)
+        public void ShowTheLogInStatusForUser(string customer)
         {
             IWebDriver webDriver = Driver.WebDriver;
             IWebElement authenticatedInfo = webDriver.FindElement(By.Id("auth"));
