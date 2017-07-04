@@ -5,11 +5,9 @@ install:
 - ps: >-
     $gauge=$env:ProgramFiles + "\gauge\bin\gauge.exe"
 
-    $cd GaugeActiveAdminExample
+    &$gauge --install csharp
 
-    &$gauge --install-all
-
-    $cd ..
+    &$gauge --install html-report
 
     if(!(Test-Path .\activeadmin-demo.war)) { wget "https://bintray.com/artifact/download/gauge/activeadmin-demo/activeadmin-demo.war" -Outfile .\activeadmin-demo.war }
 
@@ -28,11 +26,9 @@ notifications:
   on_build_success: true
   on_build_failure: true
   on_build_status_changed: true
-test_script:
+test_script: cd GaugeActiveAdminExample
 - ps: >-
     nuget restore
-
-    $cd GaugeActiveAdminExample
 
     $gauge=$env:ProgramFiles+"\gauge\bin\gauge.exe"
 
