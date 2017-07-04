@@ -28,13 +28,17 @@ test_script:
 - ps: >-
     nuget restore
 
+    $cd GaugeActiveAdminExample
+
     $gauge=$env:ProgramFiles+"\gauge\bin\gauge.exe"
 
-    &$gauge GaugeActiveAdminExample\specs
+    &$gauge specs
+
+    $cd ..
 
     echo "done!"
 artifacts:
-- path: GaugeActiveAdminExample/reports/html-report
+- path: GaugeActiveAdminExample/reports/html-reportreport
   name: gauge-reports
 - path: GaugeActiveAdminExample/failure_reports/html-report
   name: gauge-reports-failure
