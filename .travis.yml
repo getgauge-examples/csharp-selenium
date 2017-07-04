@@ -10,6 +10,8 @@ install:
   - brew cask install google-chrome
   - brew install chromedriver
   - brew install gauge
+  - nuget restore
+  - nuget install
   - gauge --install csharp
   - gauge --install html-report
 
