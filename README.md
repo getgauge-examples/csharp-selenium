@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/3e4j7b0q9ix84r8u/branch/master?svg=true)](https://ci.appveyor.com/project/sguptatw/gauge-active-admin-example-csharp/branch/master)
+
 # Gauge example in csharp
 
 This is an example project for doing web automation testing with [Gauge](http://getgauge.io). This project tests some of the functionalities of the [active admin demo](https://github.com/getgauge/activeadmin-demo) app. This app is hosted as a Java WAR (with embedded Jetty).
