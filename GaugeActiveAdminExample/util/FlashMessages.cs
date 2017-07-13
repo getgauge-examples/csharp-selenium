@@ -14,7 +14,8 @@
         {
             IWebDriver webDriver = Driver.WebDriver;
             IWebElement flashNoticeElement = webDriver.FindElement(By.XPath(String.Format("//div[@id = 'flash_notice' and text() = '{0}']", message)));
-            Assert.True(flashNoticeElement.Displayed);
+            //an exception is thrown if element is not found
+            //Assert.IsTrue(flashNoticeElement.Displayed);
         }
     }
 }
