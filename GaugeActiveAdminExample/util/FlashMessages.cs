@@ -13,7 +13,7 @@
         public void ShowAWelcomeMessage(string message)
         {
             IWebDriver webDriver = Driver.WebDriver;
-            IWebElement flashNoticeElement = webDriver.FindElement(By.XPath(String.Format("//div[@id = 'flash_notice' and text() = '%s']", message)));
+            IWebElement flashNoticeElement = webDriver.FindElement(By.XPath(String.Format("//div[@id = 'flash_notice' and text() = '{0}']", message)));
             Assert.True(flashNoticeElement.Displayed);
         }
     }
