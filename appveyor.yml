@@ -34,9 +34,9 @@ test_script:
 
     echo "done!"
 artifacts:
-- path: ./reports/html-reportreport
+- path: reports/html-reportreport
   name: gauge-reports
-- path: ./failure_reports/html-report
+- path: failure_reports/html-report
   name: gauge-reports-failure
 on_finish:
 - ps: >-
