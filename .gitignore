@@ -1,6 +1,7 @@
-GaugeActiveAdminExample/bin/
-GaugeActiveAdminExample/.gauge/
-GaugeActiveAdminExample/reports/
-GaugeActiveAdminExample/obj/
-GaugeActiveAdminExample/logs/
-GaugeActiveAdminExample/gauge_bin/
+bin/
+.gauge/
+reports/
+obj/
+logs/
+gauge_bin/
+packages/
