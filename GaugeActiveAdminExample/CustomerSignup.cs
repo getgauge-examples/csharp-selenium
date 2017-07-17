@@ -2,7 +2,7 @@
 using Gauge.CSharp.Lib;
 using Gauge.CSharp.Lib.Attribute;
 using GaugeActiveAdminExample.util;
-using NUnit.Framework;
+using FluentAssertions;
 using OpenQA.Selenium;
 using System.Collections.Generic;
 
@@ -29,7 +29,7 @@ namespace GaugeActiveAdminExample
             {
                 IWebDriver webDriver = Driver.WebDriver;
                 var products = webDriver.FindElements(By.ClassName("product"));
-                Assert.That(products.Count, Is.Not.Zero);
+                products.Count.Should().BeGreaterThan(0);
             }
         }
 }

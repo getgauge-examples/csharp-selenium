@@ -4,7 +4,7 @@
     using Gauge.CSharp.Lib;
     using Gauge.CSharp.Lib.Attribute;
     using GaugeActiveAdminExample.util;
-    using NUnit.Framework;
+    using FluentAssertions;
     using OpenQA.Selenium;
     using System.Collections.Generic;
 
@@ -31,7 +31,9 @@
         {
             IWebDriver webDriver = Driver.WebDriver;
             var products = webDriver.FindElements(By.XPath("//table/tbody/tr"));
-            Assert.AreEqual(numberOfItems, products.Count - 2);
+            int HEADERCOUNT = 1;
+            int FOOTERCOUNT = 1;
+            (products.Count - HEADERCOUNT - FOOTERCOUNT).Should().Be(numberOfItems);
         }
     }
 }

@@ -4,7 +4,7 @@ namespace GaugeActiveAdminExample
     using Gauge.CSharp.Lib;
     using Gauge.CSharp.Lib.Attribute;
     using GaugeActiveAdminExample.util;
-    using NUnit.Framework;
+    using FluentAssertions;
     using OpenQA.Selenium;
 
     public class LogIn
@@ -26,8 +26,9 @@ namespace GaugeActiveAdminExample
         {
             IWebDriver webDriver = Driver.WebDriver;
             IWebElement authenticatedInfo = webDriver.FindElement(By.Id("auth"));
-            Assert.IsTrue(authenticatedInfo.Displayed);
-            Assert.IsTrue((authenticatedInfo.Text.Contains("Welcome " + customer + "! Not you?")));
+            
+            authenticatedInfo.Displayed.Should().BeTrue();
+            authenticatedInfo.Text.Should().Contain("Welcome " + customer + "! Not you?");
         }
 
     }
