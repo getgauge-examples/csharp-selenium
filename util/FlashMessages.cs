@@ -4,7 +4,7 @@
     using Gauge.CSharp.Lib;
     using Gauge.CSharp.Lib.Attribute;
     using GaugeActiveAdminExample.util;
-    using NUnit.Framework;
+    using FluentAssertions;
     using OpenQA.Selenium;
 
     public class FlashMessages
@@ -14,8 +14,7 @@
         {
             IWebDriver webDriver = Driver.WebDriver;
             IWebElement flashNoticeElement = webDriver.FindElement(By.XPath(String.Format("//div[@id = 'flash_notice' and text() = '{0}']", message)));
-            //an exception is thrown if element is not found
-            //Assert.IsTrue(flashNoticeElement.Displayed);
+            flashNoticeElement.Displayed.Should().BeTrue();
         }
     }
 }

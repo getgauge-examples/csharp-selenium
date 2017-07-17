@@ -31,6 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentAssertions, Version=4.19.3.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>packages\FluentAssertions.4.19.3\lib\net45\FluentAssertions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.19.3.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>packages\FluentAssertions.4.19.3\lib\net45\FluentAssertions.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.7.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
@@ -49,20 +57,12 @@
       <HintPath Condition="Exists('packages\Gauge.CSharp.Lib.0.6.1\lib\net45\Gauge.CSharp.Lib.dll')">packages\Gauge.CSharp.Lib.0.6.1\lib\net45\Gauge.CSharp.Lib.dll</HintPath>
       <HintPath Condition="Exists('..\packages\Gauge.CSharp.Lib.0.6.1\lib\net45\Gauge.CSharp.Lib.dll')">..\packages\Gauge.CSharp.Lib.0.6.1\lib\net45\Gauge.CSharp.Lib.dll</HintPath>
     </Reference>
-    <Reference Include="FluentAssertions">
-      <HintPath Condition="Exists('packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.dll')">packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.dll</HintPath>
-      <HintPath Condition="Exists('..\packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.dll')">..\packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.dll</HintPath>
-    </Reference>
-    <Reference Include="FluentAssertions.Core">
-      <HintPath Condition="Exists('packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.Core.dll')">packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.Core.dll</HintPath>
-      <HintPath Condition="Exists('..\packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.Core.dll')">..\packages\FluentAssertions.3.5.0\lib\net45\FluentAssertions.Core.dll</HintPath>
-    </Reference>
     <Reference Include="WebDriver, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.WebDriver.3.4.0\lib\net40\WebDriver.dll</HintPath>
+      <HintPath>packages\Selenium.WebDriver.3.4.0\lib\net40\WebDriver.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="WebDriver.Support, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.Support.3.4.0\lib\net40\WebDriver.Support.dll</HintPath>
+      <HintPath>packages\Selenium.Support.3.4.0\lib\net40\WebDriver.Support.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
