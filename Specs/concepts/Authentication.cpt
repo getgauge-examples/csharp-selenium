@@ -5,8 +5,8 @@
 
 # Log out
 * Log out the customer
-* Option "Log in" should be available
 * Show a message "You have been logged out."
+* Option "Log in" should be available
 
 # Log in with customer name <name> and <password>
 * Login as name <name> and <password>
