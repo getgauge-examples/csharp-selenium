@@ -1,8 +1,5 @@
-Appveyor - 
+Appveyor -
 [![Build status](https://ci.appveyor.com/api/projects/status/3e4j7b0q9ix84r8u/branch/master?svg=true)](https://ci.appveyor.com/project/sguptatw/gauge-active-admin-example-csharp/branch/master)
-
-Travis -
-[![Build Status](https://travis-ci.org/getgauge-examples/csharp-selenium.svg?branch=master)](https://travis-ci.org/getgauge-examples/csharp-selenium)
 
 # Gauge example in csharp
 
