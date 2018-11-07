@@ -28,7 +28,7 @@ This example requires the following softwares to run.
 ```
 java -jar activeadmin-demo.war
 ```
-* The SUT should now be available at [http://localhost:8080/](http://localhost:8080)
+* The SUT should now be available at http://localhost:8080
 
 ## Get the Dependencies
 
