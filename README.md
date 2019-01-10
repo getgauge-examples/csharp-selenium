@@ -48,7 +48,7 @@ gauge specs --env="chrome"
 
 ## Topics covered in the example
 
-* [Specification](https://docs.gauge.org/latest/writing-specifications.html#specifications-spec), [Scenario](hhttps://docs.gauge.org/latest/writing-specifications.html#scenario),  [Step](https://docs.gauge.org/latest/writing-specifications.html#step), [Concepts](https://docs.gauge.org/latest/writing-specifications.html#concepts) and [Context Steps](https://docs.gauge.org/latest/writing-specifications.html#contexts)
+* [Specification](https://docs.gauge.org/latest/writing-specifications.html#specifications-spec), [Scenario](https://docs.gauge.org/latest/writing-specifications.html#scenario),  [Step](https://docs.gauge.org/latest/writing-specifications.html#step), [Concepts](https://docs.gauge.org/latest/writing-specifications.html#concepts) and [Context Steps](https://docs.gauge.org/latest/writing-specifications.html#contexts)
 * [Table parameters](https://docs.gauge.org/latest/writing-specifications.html#table-parameters)
 * Using [External datasource (special param)](https://docs.gauge.org/latest/writing-specifications.html#special-parameters)
 * Using [tags](https://docs.gauge.org/latest/writing-specifications.html#tags)
