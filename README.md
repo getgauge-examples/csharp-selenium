@@ -16,7 +16,7 @@ This example requires the following softwares to run.
   * .NET v4.5 (required for the CSharp plugin to run), you could write your test code to target a lesser version.
   * Gauge Visual Studio plugin (2015)
   * [NuGet](https://www.nuget.org/) package manager
-  * [Gauge](http://getgauge.io/get-started/index.html)
+  * [Gauge](https://docs.gauge.org/getting_started/installing-gauge.html)
   * Gauge csharp plugin
     * can be installed using `gauge --install java`
   * Chrome
